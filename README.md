@@ -7,9 +7,9 @@ Contents:
 
 dat.RDS: ForCenS planktonic foraminifera assemblages (Siccha and Kucera, 2017, Sci. Data, https://doi.org/10.1038/sdata.2017.109) and SST data (World Ocean Atlas 2001, Stephens et al. 2002).
 
-taxon_ranking.R: determine species ranking
+taxon_ranking.R: determine species ranking (calls random_Mat.R)
 
-many_TFs.R: build transfer functions
+many_TFs.R: build transfer functions (calls many_MAT.R and many_WA.R)
 
 assess_ranking.R: explore species ranking
 
