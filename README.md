@@ -8,7 +8,6 @@ Contents:
 dat.RDS: ForCenS planktonic foraminifera assemblages (Siccha and Kucera, 2017, Sci. Data, https://doi.org/10.1038/sdata.2017.109) and SST data (World Ocean Atlas 2001, Stephens et al. 2002).
 
 fossil_data.RDS: fossil planktonic foraminifera assemblages.
-
 Core MD95-2040: https://doi.pangaea.de/10.1594/PANGAEA.66811;
 core M35003-4: https://doi.pangaea.de/10.1594/PANGAEA.55756;
 MARGO LGM: https://doi.pangaea.de/10.1594/PANGAEA.227329.
