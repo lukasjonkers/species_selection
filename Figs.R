@@ -125,13 +125,13 @@ width_sensi <- ggplot(subset(meltsum, L1 == 'NAT'), aes(nicheWidth, pseudoR2)) +
 Fig3 <- grid.arrange(ab_sensi, width_sensi, layout_matrix = matrix(c(1,2), byrow = TRUE, ncol = 2))
 
 # Figure 4: plot different reconstructions ####
-# load reconstruction data for cores
-MD95_WArec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/MD95-2040_WA.RDS')
-MD95_MATrec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/MD95-2040_MAT.RDS')
-M30_WArec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/M35003-4_WA.RDS')
-M30_MATrec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/M35003-4_MAT.RDS')
-MARGO_WArec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/MARGO_WA.RDS')
-MARGO_MATrec <- readRDS('~/Dropbox/projects_ongoing/TF_reduction/repeat_runs/MARGO_MAT.RDS')
+# load reconstruction data for cores. Reconstructed SST calculated with reconstruct_SST.R
+MD95_WArec <- readRDS('MD95-2040_WA.RDS')
+MD95_MATrec <- readRDS('MD95-2040_MAT.RDS')
+M30_WArec <- readRDS('M35003-4_WA.RDS')
+M30_MATrec <- readRDS('M35003-4_MAT.RDS')
+MARGO_WArec <- readRDS('MARGO_WA.RDS')
+MARGO_MATrec <- readRDS('MARGO_MAT.RDS')
 
 # initially for just one core to show that there are different reconstructions
 # Iberian Margin core MD95-2040
