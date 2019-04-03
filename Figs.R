@@ -85,7 +85,6 @@ gplot_binSpp <- melt(binSpp_scaled, id.vars = 'midpoints')
 Fig2 <- ggplot(gplot_binSpp, aes(midpoints, variable, fill = value)) +
   geom_tile() +
   xlab(expression('Temperature ['*degree*C*']')) +
-  #scale_fill_gradientn(colours = brewer.pal(9, name = 'YlOrRd'), na.value = 'transparent', name = 'relative\nabundance\n[log10(%)]') +
   scale_fill_gradientn(trans = "log",
                        colours = brewer.pal(9, name = 'YlOrRd'),
                        breaks = c(2, 10, 25, 50, 100),
