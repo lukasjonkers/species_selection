@@ -1,7 +1,7 @@
 # species_selection
 Data and R code to assess planktonic foraminifera species importance and transfer function performance
 described in "Sensitivity to species selection indicates the effect of nuisance variables on marine microfossil transfer functions"
-Lukas Jonkers and Michal Kucera, Climate of the Past Discussions: https://doi.org/10.5194/cp-2018-107
+Lukas Jonkers and Michal Kucera, Climate of the Past: https://doi.org/10.5194/cp-2018-107
 
 Contents:
 
