@@ -7,7 +7,7 @@ library(foreach)
 library(doMC)
 
 # get data
-dat <- readRDS('species_domains.RDS')
+dat <- readRDS('dat.RDS')
 
 # for parallel computing. Perhaps good for randomMAT which is very slow
 registerDoMC(cores=detectCores()-1)
