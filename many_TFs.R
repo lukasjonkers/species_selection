@@ -4,7 +4,7 @@
 
 rank.WA <- readRDS('rank_WA.RDS')
 rank.MAT <- readRDS('rank_MAT.RDS')
-dat <- readRDS('species_domains.RDS')
+dat <- readRDS('dat.RDS')
 
 source('many_WA.R')
 
