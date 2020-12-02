@@ -8,7 +8,7 @@ library(reshape2)
 dat <- readRDS('dat.RDS')
 
 # maximum abundance (99th percentile)
-max.abun <- lapply(dat.regions, function(x)
+max.abun <- lapply(dat[1:5], function(x)
   apply(x$species, 2, function(y) quantile(y, 0.99))
 )
 
@@ -54,12 +54,12 @@ gfit <- function(x, y){
   return(out)
 }
 
-fitr2 <- sapply(dat.regions, function(x){
+fitr2 <- sapply(dat[1:5], function(x){
   apply(x$species, 2, function(y) gfit(x$SST, y))
 })
 
 # get estimate of thermal niche width of species
-nicheWidth <- lapply(dat.regions, function(x){
+nicheWidth <- lapply(dat[1:5], function(x){
   presence <- x$species >= 1e-8
   apply(presence, 2, function(y) quantile(x$SST[y], 0.975) - quantile(x$SST[y], 0.025))
 })
@@ -85,7 +85,7 @@ rank.MAT <- lapply(rank.MAT, function(x)
 joinsum <- mapply(function(x, y, z) join_all(list(x, y, z), by = 'rn'), x = sumdf, y = rank.WA, z = rank.MAT, SIMPLIFY = FALSE)
 meltsum <- melt(joinsum, id.vars = c('maxAbundance', 'pseudoR2', 'nicheWidth', 'impWA', 'impMAT'))
 
-saveRDS(meltsum, '~/Dropbox/projects_ongoing/TF_reduction/assess_ranking.RDS')
+saveRDS(meltsum, '~/assess_ranking.RDS')
 
 # correlation between temperature sensitivity and abundance and temperature sensitivity and thermal niche width
 round(cor(subset(meltsum, L1 == 'NAT')$maxAbundance, subset(meltsum, L1 == 'NAT')$pseudoR2), 2)
